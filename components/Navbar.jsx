@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import styles from "../styles";
 import { navVariants } from "../utils/motion";
 import { useState } from "react";
+import Link from "next/link";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   return (
@@ -26,10 +27,21 @@ const Navbar = () => {
         </h2>
         <div className="hidden md:flex">
           <ul className=" md:flex gap-4 font-extrabold text-24px leading-30px text-white">
-            <li>Home</li>
-            <li>About</li>
-            <li>Works</li>
-            <li>Skills</li>
+            <li className="py-1 px-2 cursor-pointer">
+              <Link href="/">Home</Link>
+            </li>
+            <li className="py-1 px-2 cursor-pointer">
+              <Link href="#about">About</Link>
+            </li>
+            <li className="py-1 px-2 cursor-pointer">
+              <Link href="#works">Works</Link>
+            </li>
+            <li className="py-1 px-2 cursor-pointer">
+              <Link href="#skills">Skills</Link>
+            </li>
+            <li className="py-1 px-2 cursor-pointer">
+              <Link href="#contact">Contact</Link>
+            </li>
           </ul>
         </div>
         <img
