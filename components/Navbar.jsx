@@ -1,7 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import styles from "../styles";
 import { navVariants } from "../utils/motion";
+import { close, menu } from "../assets";
 import { useState } from "react";
 import Link from "next/link";
 const Navbar = () => {
@@ -17,11 +19,6 @@ const Navbar = () => {
       <div
         className={`${styles.innerWidth} mx-auto flex  justify-between gap-8`}
       >
-        {/* <img
-        src="/search.svg"
-        alt="search"
-        className="w-[24px] h-[24px] object-contain "
-      /> */}
         <h2 className="font-extrabold text-24px leading-30px text-white">
           Portfolio
         </h2>
@@ -44,12 +41,40 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <img
-          src={toggle ? "/menu.svg" : "/menu.svg"}
-          alt="menu"
-          onClick={() => setToggle((prev) => !prev)}
-          className="w-[24px] h-[24px] object-contain md:hidden flex"
-        />
+
+        <div className="sm:hidden flex flex-1 justify-end items-center">
+          <Image
+            src={toggle ? close : menu}
+            alt="menu-bar"
+            height="28px"
+            width="28px"
+            className="z-20"
+            objectFit="contain"
+            onClick={() => setToggle((prev) => !prev)}
+          />
+          <div
+            className={`${
+              toggle ? "flex" : "hidden"
+            } p-6 bg-black-gradient z-40 overflow-hidden absolute top-[5rem] right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+          >
+            <ul className="list-none justify-end items-center flex-1 flex flex-col">
+              {["Home", "About", "Works", "Skills", "Contact"].map(
+                (navLink, idx) => (
+                  <li
+                    key={navLink + idx}
+                    className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${
+                      idx == 5 - 1 ? "mb-0" : "mb-4"
+                    }`}
+                  >
+                    <a href={`${navLink == "Home" ? "/" : "#" + navLink}`}>
+                      {navLink}
+                    </a>
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
+        </div>
       </div>
     </motion.nav>
   );
