@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ["plugin:react/recommended", "airbnb"],
+  extends: "next",
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -14,7 +14,7 @@ module.exports = {
   plugins: ["react"],
   rules: {
     quotes: [2, "single", { avoidEscape: true }],
-    "react/no-unescaped-entities": 0,
+    "react/no-unescaped-entities": "off",
     "eslintreact/no-danger": 0,
     "react/jsx-max-props-per-line": 0,
     "react/jsx-first-prop-new-line": 0,
@@ -26,6 +26,7 @@ module.exports = {
     "react/jsx-no-constructed-context-values": 0,
     "import/extensions": 0,
     "react/prop-types": 0,
+    "@next/next/no-page-custom-font": "off",
     "linebreak-style": 0,
     "react/state-in-constructor": 0,
     "import/prefer-default-export": 0,
