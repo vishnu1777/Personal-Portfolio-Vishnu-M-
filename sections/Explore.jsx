@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { client } from "../lib/client";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ExploreCard, TitleText, TypingText } from "../components";
 import styles from "../styles";
@@ -9,7 +10,16 @@ import { exploreWorlds } from "../constants";
 
 const Explore = () => {
   const [active, setActive] = useState("world-2");
+  const [filterWork, setFilterWork] = useState([]);
 
+  useEffect(() => {
+    const query = '*[_type == "works"]';
+    client.fetch(query).then((data) => {
+      setWorks(data);
+      setFilterWork(data);
+    });
+  }, []);
+  console.log(filterWork ? filterWork : "No data");
   return (
     <section className={`${styles.paddings}`} id="explore">
       <motion.div
@@ -19,12 +29,16 @@ const Explore = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col`}
       >
-        <TypingText title="| The world" textStyles="text-center" />
+        <TypingText title="| Projects" textStyles="text-center" />
         <TitleText
           title={
             <>
-              Choose the world you want <br className="md:block hidden" />
-              to explore
+              My Creative{" "}
+              <span className="font-extrabold text-white underline">
+                Portfolio
+              </span>{" "}
+              <br className="md:block hidden" />
+              Section
             </>
           }
           textStyles="text-center"
