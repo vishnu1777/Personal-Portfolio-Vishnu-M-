@@ -16,7 +16,6 @@ const ExploreCard = ({
   projectLink,
   handleClick,
 }) => {
-  console.log(title);
   return (
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 1.75)}

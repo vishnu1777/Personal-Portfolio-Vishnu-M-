@@ -4,21 +4,18 @@ import { motion } from "framer-motion";
 import { ExploreCard, TitleText, TypingText } from "../components";
 import styles from "../styles";
 import { staggerContainer } from "../utils/motion";
-import { exploreWorlds } from "../constants";
 
 const Explore = () => {
-  const [works, setWorks] = useState([]);
   const [active, setActive] = useState("world-2");
   const [filterWork, setFilterWork] = useState([]);
 
   useEffect(() => {
     const query = '*[_type == "works"]';
     client.fetch(query).then((data) => {
-      setWorks(data);
       setFilterWork(data);
     });
   }, []);
-  console.log(filterWork ? filterWork : "No data");
+
   return (
     <section className={`${styles.paddings}`} id="explore">
       <motion.div
