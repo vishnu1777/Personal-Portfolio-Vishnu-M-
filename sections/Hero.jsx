@@ -1,4 +1,5 @@
 "use client";
+
 import { motion } from "framer-motion";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import Image from "next/image";
@@ -47,7 +48,7 @@ const Hero = () => {
             className="flex mt-4 md:mt-0 flex-row justify-center items-center"
           >
             <p className="text-white lg:text-[80px] font-bold text-[30px]">
-              {text}
+              {text} |
             </p>
           </motion.div>
         </div>
