@@ -9,6 +9,7 @@ import { staggerContainer } from "../utils/motion";
 import { exploreWorlds } from "../constants";
 
 const Explore = () => {
+  const [works, setWorks] = useState([]);
   const [active, setActive] = useState("world-2");
   const [filterWork, setFilterWork] = useState([]);
 
@@ -44,12 +45,16 @@ const Explore = () => {
           textStyles="text-center"
         />
         <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
-          {exploreWorlds.map((world, i) => (
+          {filterWork.map((work, i) => (
             <ExploreCard
-              key={world.id}
-              {...world}
+              key={work?._id}
+              title={work?.title}
+              imgUrl={work?.imgUrl}
+              description={work?.description}
               index={i}
+              projectLink={work?.projectLink}
               active={active}
+              id={work?.id}
               handleClick={setActive}
             />
           ))}
