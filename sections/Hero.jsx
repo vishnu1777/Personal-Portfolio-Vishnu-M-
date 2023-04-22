@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cursor, useTypewriter } from "react-simple-typewriter";
+import { useTypewriter } from "react-simple-typewriter";
 import Image from "next/image";
 import BackgroundCircles from "./BackgroundCircles";
 import styles from "../styles";

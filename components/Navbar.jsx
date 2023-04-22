@@ -24,7 +24,7 @@ const Navbar = () => {
           Portfolio
         </h2>
         <div className="hidden md:flex">
-          <ul className=" md:flex gap-4 font-extrabold text-24px leading-30px text-white">
+          <ul className=" md:flex gap-4 font-extrabold cursor-pointer text-24px leading-30px text-white">
             <li className="py-1 px-2 cursor-pointer">
               <Link href="/">Home</Link>
             </li>
