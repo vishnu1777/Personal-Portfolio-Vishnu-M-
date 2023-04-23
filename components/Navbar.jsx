@@ -11,6 +11,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <motion.nav
+      id="home"
       variants={navVariants}
       initial="hidden"
       // viewport={{ once: true }}
@@ -28,7 +29,7 @@ const Navbar = () => {
         <div className="hidden md:flex  z-50">
           <ul className=" md:flex gap-4 font-extrabold  text-24px leading-30px text-white">
             <li className="py-1 px-2  cursor-pointer ">
-              <Link href="/">Home</Link>
+              <Link href="#home">Home</Link>
             </li>
             <li className="py-1 px-2 cursor-pointer">
               <Link href="#works">Works</Link>
@@ -67,13 +68,7 @@ const Navbar = () => {
                     idx == 5 - 1 ? "mb-0" : "mb-4"
                   }`}
                 >
-                  <Link
-                    href={`${
-                      navLink == "Home" ? "/" : "#" + navLink.toLowerCase()
-                    }`}
-                  >
-                    {navLink}
-                  </Link>
+                  <Link href={`${"#" + navLink.toLowerCase()}`}>{navLink}</Link>
                 </li>
               ))}
             </ul>

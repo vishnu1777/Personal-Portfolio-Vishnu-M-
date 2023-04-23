@@ -9,6 +9,7 @@ import Image from "next/image";
 import { emails, mobile } from "../assets";
 import { footerVariants } from "../utils/motion";
 import Link from "next/link";
+import BottomNavigator from "./BottomNavigator";
 
 const Footer = () => {
   // Other content
@@ -148,6 +149,7 @@ const Footer = () => {
             </div>
           )}
         </div>
+        <BottomNavigator />
         {/* here the form ends */}
         <div className="flex flex-col">
           <div className="mb-[50px] h-[2px] bg-white opacity-10 " />

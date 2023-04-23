@@ -5,10 +5,11 @@ import StartSteps from "./StartSteps";
 import NewFeatures from "./NewFeatures";
 import InsightCard from "./InsightCard";
 import Footer from "./Footer";
-
+import BottomNavigator from "./BottomNavigator";
 export {
   Navbar,
   TitleText,
+  BottomNavigator,
   TypingText,
   StartSteps,
   NewFeatures,

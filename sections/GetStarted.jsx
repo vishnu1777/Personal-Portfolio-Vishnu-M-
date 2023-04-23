@@ -42,13 +42,15 @@ const GetStarted = () => {
             {skills?.slice(0, skills?.length / 2).map((skill) => (
               <Skill key={skill?._id} skill={skill} directionLeft={true} />
             ))}
-            {skills?.slice(skills?.length / 2, skills.length).map((skill) => (
-              <Skill
-                key={skill?._id + "id"}
-                skill={skill}
-                directionLeft={false}
-              />
-            ))}
+            {skills
+              ?.slice(skills?.length / 2, skills.length)
+              .map((skill, idx) => (
+                <Skill
+                  key={`skill?._id-${idx}`}
+                  skill={skill}
+                  directionLeft={false}
+                />
+              ))}
           </div>
         </motion.div>
         <motion.div
@@ -60,10 +62,10 @@ const GetStarted = () => {
 
           <div className="mt-[31px] flex flex-col max-w-[370px] gap-[24px] ">
             {experience.map((feature, i) => (
-              <>
+              <div key={`${feature}-${i}`}>
                 {feature?.works?.map((work) => (
                   <StartSteps
-                    key={feature}
+                    key={`${i}+${feature}`}
                     number={i}
                     year={feature?.year}
                     name={work?.name}
@@ -71,7 +73,7 @@ const GetStarted = () => {
                     desc={work?.desc}
                   />
                 ))}
-              </>
+              </div>
             ))}
           </div>
         </motion.div>
