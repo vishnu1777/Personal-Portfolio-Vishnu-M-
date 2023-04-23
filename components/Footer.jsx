@@ -91,7 +91,7 @@ const Footer = () => {
 
           {!isFormSubmitted ? (
             <div className="w-[90%] flex-col my-4 mx-auto flex items-center justify-center">
-              <div className="w-full  my-3 mx-0 rounded-[10px] cursor-pointer transition-all ease-in-out duration-[0.3s] ">
+              <div className="w-full hover:shadow-lg font-normal my-3 mx-0 rounded-[10px] cursor-pointer transition-all ease-in-out duration-[0.3s] ">
                 <input
                   type="text"
                   placeholder="Your Name"

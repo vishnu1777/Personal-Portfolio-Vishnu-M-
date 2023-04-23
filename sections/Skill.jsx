@@ -15,8 +15,9 @@ const Skill = ({ skill, directionLeft }) => {
           width={10}
           height={10}
           unoptimized={true}
-          className="rounded-full border border-gray-500 object-cover w-10 h-10 md:w-24 md:h-24  filter
-    group-hover:grayscale transition duration-300 ease-in-out"
+          objectFit="contain"
+          className="rounded-full border border-gray-500  w-10 h-10 md:w-24 md:h-24  filter
+    group-hover:grayscale transition duration-300 object-contain ease-in-out"
         />
       )}
 
