@@ -10,6 +10,7 @@ import robot from "./robot.png";
 import send from "./Send.svg";
 import shield from "./Shield.svg";
 import star from "./Star.svg";
+import mobile from "./mobile.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import google from "./google.svg";
@@ -24,12 +25,15 @@ import people01 from "./people01.png";
 import people02 from "./people02.png";
 import people03 from "./people03.png";
 import myProfile from "./my-profile.jpg";
+import emails from "./email.png";
 export {
   airbnb,
+  emails,
   bill,
   binance,
   myProfile,
   card,
+  mobile,
   coinbase,
   dropbox,
   logo,
