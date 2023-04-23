@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { urlFor } from "../lib/client";
 import styles from "../styles";
 import { fadeIn } from "../utils/motion";
+import { CldImage } from "next-cloudinary";
 import Link from "next/link";
 const ExploreCard = ({
   id,
@@ -26,13 +27,12 @@ const ExploreCard = ({
   `}
       onClick={() => handleClick(id)}
     >
-      <img
+      <Image
         src={urlFor(imgUrl).url()}
         alt={title}
-        // width={100}
-        // height={100}
-        // objectFit="cover"
-        // priority
+        width={100}
+        height={100}
+        unoptimized={true}
         className="absolute w-full h-full object-cover rounded-[24px]"
       />
       {active !== id ? (
