@@ -5,13 +5,9 @@ import StartSteps from "./StartSteps";
 import NewFeatures from "./NewFeatures";
 import InsightCard from "./InsightCard";
 import Footer from "./Footer";
-import NavigationDots from "./NavigationDots";
-import SocialMedia from "./SocialMedia";
 
 export {
   Navbar,
-  NavigationDots,
-  SocialMedia,
   TitleText,
   TypingText,
   StartSteps,

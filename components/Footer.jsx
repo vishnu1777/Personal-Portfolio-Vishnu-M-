@@ -8,6 +8,7 @@ import styles from "../styles";
 import Image from "next/image";
 import { emails, mobile } from "../assets";
 import { footerVariants } from "../utils/motion";
+import Link from "next/link";
 
 const Footer = () => {
   // Other content
@@ -159,12 +160,14 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               {socials.map((social) => (
-                <img
-                  key={social.name}
-                  src={social.url}
-                  alt={social.name}
-                  className="w-[24px] h-[24px] object-contain cursor-pointer "
-                />
+                <Link href={social.link} target="_blank">
+                  <img
+                    key={social.name}
+                    src={social.url}
+                    alt={social.name}
+                    className="w-[24px] h-[24px] object-contain cursor-pointer "
+                  />
+                </Link>
               ))}
             </div>
           </div>

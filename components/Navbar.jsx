@@ -42,7 +42,10 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div
+          onClick={() => setToggle((prev) => !prev)}
+          className="sm:hidden flex flex-1 justify-end items-center"
+        >
           <Image
             src={toggle ? close : menu}
             alt="menu-bar"
@@ -50,7 +53,6 @@ const Navbar = () => {
             width="28px"
             className="z-20"
             objectFit="contain"
-            onClick={() => setToggle((prev) => !prev)}
           />
           <div
             className={`${
