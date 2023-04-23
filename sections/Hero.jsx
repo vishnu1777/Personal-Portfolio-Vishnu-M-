@@ -19,7 +19,7 @@ const Hero = () => {
     delaySpeed: 2000,
   });
   return (
-    <section className={`${styles.yPaddings} sm:pl-16 pl-6 `}>
+    <section className={`${styles.yPaddings}   mx-auto`}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
