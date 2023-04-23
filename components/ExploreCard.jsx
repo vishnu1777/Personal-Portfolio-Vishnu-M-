@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { urlFor } from "../lib/client";
 import styles from "../styles";
 import { fadeIn } from "../utils/motion";
-import { CldImage } from "next-cloudinary";
+
 import Link from "next/link";
 const ExploreCard = ({
   id,
