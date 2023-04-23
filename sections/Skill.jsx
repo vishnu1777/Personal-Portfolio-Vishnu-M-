@@ -2,6 +2,7 @@ import React from "react";
 import { urlFor } from "../lib/client";
 
 const Skill = ({ skill, directionLeft }) => {
+  console.log(skill);
   return (
     <div className="group relative flex cursor-pointer ">
       <img
