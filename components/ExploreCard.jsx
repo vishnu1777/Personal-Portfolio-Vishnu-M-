@@ -7,6 +7,7 @@ import styles from "../styles";
 import { fadeIn } from "../utils/motion";
 
 import Link from "next/link";
+
 const ExploreCard = ({
   id,
   imgUrl,
@@ -17,7 +18,6 @@ const ExploreCard = ({
   projectLink,
   handleClick,
 }) => {
-  console.log("Explore:", imgUrl);
   return (
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 1.75)}

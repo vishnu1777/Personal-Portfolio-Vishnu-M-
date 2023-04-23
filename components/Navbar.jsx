@@ -13,12 +13,14 @@ const Navbar = () => {
     <motion.nav
       variants={navVariants}
       initial="hidden"
+      // viewport={{ once: true }}
       whileInView="show"
-      className={`${styles.xPaddings} py-8 relative `}
+      className={`${styles.xPaddings} py-6 relative   `}
     >
       <div className="absolute w-[50%]  inset-0 gradient-01" />
+
       <div
-        className={`${styles.innerWidth} mx-auto flex   justify-between gap-8`}
+        className={`${styles.innerWidth} mx-auto flex    justify-between gap-8`}
       >
         <h2 className="font-extrabold text-24px leading-30px text-white">
           Portfolio
@@ -27,9 +29,6 @@ const Navbar = () => {
           <ul className=" md:flex gap-4 font-extrabold  text-24px leading-30px text-white">
             <li className="py-1 px-2  cursor-pointer ">
               <Link href="/">Home</Link>
-            </li>
-            <li className="py-1 px-2 cursor-pointer">
-              <a href="#about">About</a>
             </li>
             <li className="py-1 px-2 cursor-pointer">
               <Link href="#works">Works</Link>
@@ -59,24 +58,22 @@ const Navbar = () => {
             } p-6 bg-black-gradient z-40 overflow-hidden absolute top-[5rem] right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
           >
             <ul className="list-none justify-end items-center flex-1 flex flex-col">
-              {["Home", "About", "Works", "Skills", "Contact"].map(
-                (navLink, idx) => (
-                  <li
-                    key={navLink + idx}
-                    className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${
-                      idx == 5 - 1 ? "mb-0" : "mb-4"
+              {["Home", "Works", "Skills", "Contact"].map((navLink, idx) => (
+                <li
+                  key={navLink + idx}
+                  className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${
+                    idx == 5 - 1 ? "mb-0" : "mb-4"
+                  }`}
+                >
+                  <Link
+                    href={`${
+                      navLink == "Home" ? "/" : "#" + navLink.toLowerCase()
                     }`}
                   >
-                    <Link
-                      href={`${
-                        navLink == "Home" ? "/" : "#" + navLink.toLowerCase()
-                      }`}
-                    >
-                      {navLink}
-                    </Link>
-                  </li>
-                )
-              )}
+                    {navLink}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

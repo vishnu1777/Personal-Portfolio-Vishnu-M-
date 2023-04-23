@@ -25,8 +25,6 @@ const GetStarted = () => {
     });
   }, []);
 
-  console.log(experience);
-
   return (
     <section id="skills" className={`${styles.paddings} relative z-10 `}>
       <motion.div
@@ -45,7 +43,11 @@ const GetStarted = () => {
               <Skill key={skill?._id} skill={skill} directionLeft={true} />
             ))}
             {skills?.slice(skills?.length / 2, skills.length).map((skill) => (
-              <Skill key={skill?._id} skill={skill} directionLeft={false} />
+              <Skill
+                key={skill?._id + "id"}
+                skill={skill}
+                directionLeft={false}
+              />
             ))}
           </div>
         </motion.div>

@@ -9,7 +9,12 @@ import { myProfile } from "../assets";
 import { staggerContainer, textVariant } from "../utils/motion";
 const Hero = () => {
   const [text, count] = useTypewriter({
-    words: [`Hii,The Name's Vishnu M`, "Guy-who-loves-Tech", "<CodeIsLove/>"],
+    words: [
+      `Hii,The Name's Vishnu M`,
+      "Full-Stack-Dev",
+      "Guy-who-loves-Tech",
+      "<CodeIsLove/>",
+    ],
     loop: true,
     delaySpeed: 2000,
   });

@@ -3,7 +3,9 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ExploreCard, TitleText, TypingText } from "../components";
 import styles from "../styles";
+import { fadeIn } from "../utils/motion";
 import { staggerContainer } from "../utils/motion";
+import Link from "next/link";
 
 const Explore = () => {
   const [active, setActive] = useState("world-2");
@@ -17,7 +19,7 @@ const Explore = () => {
   }, []);
 
   return (
-    <section id="works" className={`${styles.paddings}`}>
+    <section id="works" className={`${styles.paddings}  `}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
