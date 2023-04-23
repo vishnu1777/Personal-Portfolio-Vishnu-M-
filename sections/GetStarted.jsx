@@ -1,4 +1,3 @@
-"use client";
 import { motion } from "framer-motion";
 import { StartSteps, TitleText, TypingText } from "../components";
 import styles from "../styles";
@@ -15,11 +14,18 @@ const GetStarted = () => {
 
   useEffect(() => {
     const skillsQuery = '*[_type == "skills"]';
+    const experienceQuery = '*[_type == "experiences"]';
+
+    client.fetch(experienceQuery).then((data) => {
+      setExperience(data);
+    });
 
     client.fetch(skillsQuery).then((data) => {
       setSkills(data);
     });
   }, []);
+
+  console.log(experience);
 
   return (
     <section id="skills" className={`${styles.paddings} relative z-10 `}>
@@ -47,11 +53,23 @@ const GetStarted = () => {
           variants={fadeIn("left", "tween", 0.2, 1)}
           className="flex-[0.75] flex justify-center flex-col "
         >
-          <TypingText title="| Skill & Experience" />
-          <TitleText title={<>Get Started with just a few clicks</>} />
+          <TypingText title="| Skills & Experiences" />
+          <TitleText title={<>Experience</>} />
+
           <div className="mt-[31px] flex flex-col max-w-[370px] gap-[24px] ">
-            {startingFeatures.map((feature, i) => (
-              <StartSteps key={feature} number={i + 1} text={feature} />
+            {experience.map((feature, i) => (
+              <>
+                {feature?.works?.map((work) => (
+                  <StartSteps
+                    key={feature}
+                    number={i}
+                    year={feature?.year}
+                    name={work?.name}
+                    company={work?.company}
+                    desc={work?.desc}
+                  />
+                ))}
+              </>
             ))}
           </div>
         </motion.div>

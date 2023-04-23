@@ -99,7 +99,7 @@ const Footer = () => {
                   value={name}
                   name="name"
                   onChange={handleChangeInput}
-                  className="w-full p-4 border-none rounded-lg outline-none"
+                  className="w-full p-4 font-sans border-none rounded-lg outline-none"
                 />
               </div>
               <div className="w-full  my-3 mx-0 rounded-[10px] cursor-pointer transition-all ease-in-out duration-[0.3s]">
@@ -109,12 +109,12 @@ const Footer = () => {
                   value={email}
                   name="email"
                   onChange={handleChangeInput}
-                  className="w-full p-4 border-none rounded-lg outline-none"
+                  className="w-full p-4 font-sans border-none rounded-lg outline-none"
                 />
               </div>
               <div className="w-full  my-3 mx-0 rounded-[10px] cursor-pointer transition-all ease-in-out duration-[0.3s] ">
                 <textarea
-                  className="w-full h-40 p-4 border-none rounded-lg outline-none"
+                  className="w-full h-40 p-4 border-none font-sans rounded-lg outline-none"
                   placeholder="Your message"
                   value={message}
                   name="message"
@@ -154,7 +154,7 @@ const Footer = () => {
           <div className="flex items-center justify-between flex-wrap gap-4">
             <h4 className="font-extrabold text-[24px] text-white ">Vishnu M</h4>
             <p className="font-normal text-[14px] text-white opacity-50">
-              Copyright @ 2022 - 2023 Metaverse. All rights reserved.
+              @2023 Vishnu M All rights reserved
             </p>
             <div className="flex gap-4">
               {socials.map((social) => (
