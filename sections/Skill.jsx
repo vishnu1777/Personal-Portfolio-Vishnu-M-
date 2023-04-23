@@ -4,8 +4,7 @@ import React from "react";
 import { urlFor } from "../lib/client";
 import Image from "next/image";
 
-const Skill = ({ skill, directionLeft }) => {
-  console.log(skill);
+const Skill = ({ skill }) => {
   return (
     <div className="group relative flex cursor-pointer ">
       {skill.icon && (

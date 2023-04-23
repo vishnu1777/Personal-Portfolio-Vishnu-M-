@@ -14,22 +14,22 @@ const Navbar = () => {
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className={`${styles.xPaddings} py-8 relative`}
+      className={`${styles.xPaddings} py-8 relative `}
     >
-      <div className="absolute w-[50%] inset-0 gradient-01" />
+      <div className="absolute w-[50%]  inset-0 gradient-01" />
       <div
-        className={`${styles.innerWidth} mx-auto flex  justify-between gap-8`}
+        className={`${styles.innerWidth} mx-auto flex   justify-between gap-8`}
       >
         <h2 className="font-extrabold text-24px leading-30px text-white">
           Portfolio
         </h2>
-        <div className="hidden md:flex">
-          <ul className=" md:flex gap-4 font-extrabold cursor-pointer text-24px leading-30px text-white">
-            <li className="py-1 px-2 cursor-pointer">
+        <div className="hidden md:flex  z-50">
+          <ul className=" md:flex gap-4 font-extrabold  text-24px leading-30px text-white">
+            <li className="py-1 px-2  cursor-pointer ">
               <Link href="/">Home</Link>
             </li>
             <li className="py-1 px-2 cursor-pointer">
-              <Link href="#about">About</Link>
+              <a href="#about">About</a>
             </li>
             <li className="py-1 px-2 cursor-pointer">
               <Link href="#works">Works</Link>
@@ -67,9 +67,13 @@ const Navbar = () => {
                       idx == 5 - 1 ? "mb-0" : "mb-4"
                     }`}
                   >
-                    <a href={`${navLink == "Home" ? "/" : "#" + navLink}`}>
+                    <Link
+                      href={`${
+                        navLink == "Home" ? "/" : "#" + navLink.toLowerCase()
+                      }`}
+                    >
                       {navLink}
-                    </a>
+                    </Link>
                   </li>
                 )
               )}
