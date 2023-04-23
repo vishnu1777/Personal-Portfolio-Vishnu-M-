@@ -1,14 +1,19 @@
 import styles from "../styles";
-const StartSteps = ({ number, text }) => (
+const StartSteps = ({ name, desc, number }) => (
   <div className={`${styles.flexCenter} flex-row`}>
     <div
-      className={`${styles.flexCenter} w-[70px] h-[70px] rounded-[24px] bg-[#323f5d]`}
+      className={`${styles.flexCenter} w-[200px] h-[70px] rounded-[24px] bg-[#323f5d]`}
     >
-      <p className="font-bold text-[20px] text-white">0{number}</p>
+      <p className="font-bold text-[20px] text-white">0{number + 1}</p>
     </div>
-    <p className="flex-1 ml-[30px] font-normal text-[18px] text-[#B0B0B0] leading-[32px]">
-      {text}
-    </p>
+    <div>
+      <p className="flex-1  ml-[30px] font-bold text-[18px] text-[#B0B0B0] leading-[32px]">
+        {name}
+      </p>
+      <p className="flex-1 ml-[30px] font-normal text-[18px] text-[#B0B0B0] leading-[32px]">
+        {desc}
+      </p>
+    </div>
   </div>
 );
 

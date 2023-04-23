@@ -55,13 +55,14 @@ const GetStarted = () => {
         >
           <TypingText title="| A Skills None Can Reject" />
           <TitleText title={<>Skills and Experience</>} />
+
           <div className="mt-[31px] flex flex-col max-w-[370px] gap-[24px] ">
-            {startingFeatures.map((feature, i) => (
+            {experience.map((feature, i) => (
               <>
                 {feature?.works?.map((work) => (
-                 
                   <StartSteps
                     key={feature}
+                    number={i}
                     year={feature?.year}
                     name={work?.name}
                     company={work?.company}
