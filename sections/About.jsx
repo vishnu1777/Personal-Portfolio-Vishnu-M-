@@ -21,16 +21,19 @@ const About = () => (
         className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white "
       >
         <span className="font-extrabold text-white">Hii,</span> my name is
-        <span className="font-extrabold text-white"> Vishnu M</span> , a student
-        who has a keen interest in{" "}
-        <span className="font-extrabold text-white"> Solving Problems</span> and
-        creating visually appealing{" "}
-        <span className="font-extrabold text-white">Websites</span>. As a
-        technology enthusiast, I loves to explore new and innovative ways to
-        tackle challenges in his field of study.And on a mission to create
-        impactful solutions that are both{" "}
-        <span className="font-extrabold text-white"> Creative</span> and
-        <span className="font-extrabold text-white"> User-friendly</span>.
+        <span className="font-extrabold text-white"> Vishnu M</span> , a
+        self-taught full-stack developer and student. I specialize in{" "}
+        <span className="font-extrabold text-white"> MERN Stack </span>
+        development and have a keen interest in
+        <span className="font-extrabold text-white"> Blockchain </span>
+        technology.With a year of experience in{" "}
+        <span className="font-extrabold text-white"> Javascript</span>,{" "}
+        <span className="font-extrabold text-white"> React</span>,{" "}
+        <span className="font-extrabold text-white"> NodeJs</span>,{" "}
+        <span className="font-extrabold text-white"> MongoDB</span>,I enjoy
+        tackling challenging projects that require creative problem-solving.
+        When I'm not coding, I stay up-to-date with industry trends and love
+        reading about new technologies. Thanks for checking out my portfolio
       </motion.p>
       <motion.img
         variants={fadeIn("up", "tween", 0.3, 1)}

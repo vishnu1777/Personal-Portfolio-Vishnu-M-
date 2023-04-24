@@ -21,9 +21,13 @@ const Skill = ({ skill }) => {
       )}
 
       <div
-        className="absolute opacity-0 group-hover:opacity-80 transition 
-    duration-300 ease-in-out group-hover:bg-white h-16 w-16  md:h-24 md:w-24 rounded-full z-0"
-      ></div>
+        className="absolute  opacity-0 group-hover:opacity-80 transition 
+    duration-300 ease-in-out group-hover:bg-white h-14 w-14  md:h-24 md:w-24 rounded-full z-0"
+      >
+        <p className=" text-center mt-5 md:mt-[2.3rem] text-[15px] font-semibold">
+          {skill?.progress}%
+        </p>
+      </div>
     </div>
   );
 };

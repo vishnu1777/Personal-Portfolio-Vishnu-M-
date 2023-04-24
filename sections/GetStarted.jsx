@@ -7,7 +7,7 @@ import {
 } from "../components";
 import styles from "../styles";
 import { staggerContainer, fadeIn, planetVariants } from "../utils/motion";
-import { startingFeatures } from "../constants";
+
 import { urlFor, client } from "../lib/client";
 import Skill from "./Skill";
 

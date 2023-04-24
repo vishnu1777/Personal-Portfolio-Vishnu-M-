@@ -8,9 +8,11 @@ import workExperience from './workExperience'
 import works from './works'
 import hero from './hero'
 import workPosition from './workPosition'
+import certificates from './certificates'
 import heroIcons from './heroIcons'
 export const schemaTypes = [
   testimonials,
+  certificates,
   abouts,
   brands,
   contact,
