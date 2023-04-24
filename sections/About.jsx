@@ -22,7 +22,9 @@ const About = () => (
       >
         <span className="font-extrabold text-white">Hii,</span> my name is
         <span className="font-extrabold text-white"> Vishnu M</span> , a
-        self-taught full-stack developer and student. I specialize in{" "}
+        self-taught{" "}
+        <span className="font-extrabold text-white"> Full Stack</span> developer
+        and student. I specialize in{" "}
         <span className="font-extrabold text-white"> MERN Stack </span>
         development and have a keen interest in
         <span className="font-extrabold text-white"> Blockchain </span>
