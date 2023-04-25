@@ -167,7 +167,10 @@ const Footer = () => {
                   href={social.link}
                   target="_blank"
                 >
-                  <img
+                  <Image
+                    width={24}
+                    height={24}
+                    unoptimized={true}
                     key={social?.name}
                     src={social?.url}
                     alt={social?.name}
