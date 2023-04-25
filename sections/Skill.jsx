@@ -4,12 +4,12 @@ import React from "react";
 import { urlFor } from "../lib/client";
 import Image from "next/image";
 
-const Skill = ({ skill }) => {
+const Skill = ({ skillicon, skillProgress }) => {
   return (
     <div className="group relative flex cursor-pointer ">
-      {skill.icon && (
+      {skillicon && (
         <Image
-          src={urlFor(skill?.icon).url()}
+          src={urlFor(skillicon).url()}
           alt="skillImages"
           width={10}
           height={10}
@@ -25,7 +25,7 @@ const Skill = ({ skill }) => {
     duration-300 ease-in-out group-hover:bg-white h-14 w-14  md:h-24 md:w-24 rounded-full z-0"
       >
         <p className=" text-center mt-5 md:mt-[2.3rem] text-[15px] font-semibold">
-          {skill?.progress}%
+          {skillProgress}%
         </p>
       </div>
     </div>

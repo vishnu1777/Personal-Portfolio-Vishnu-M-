@@ -1,11 +1,11 @@
 "use client";
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { InsightCard, TitleText, TypingText } from "../components";
+import { InsightCard, TitleText, TypingText } from ".";
 import styles from "../styles";
 import { staggerContainer } from "../utils/motion";
-
+import { useState, useEffect } from "react";
 import { client } from "../lib/client";
+
 const Insights = () => {
   const [certificates, setCertificates] = useState([]);
 
@@ -32,7 +32,10 @@ const Insights = () => {
           {certificates?.map((certificate, i) => (
             <InsightCard
               key={`${certificate?.name}-${i}`}
-              certificate={certificate}
+              certificateImage={certificate?.image}
+              certificateName={certificate?.name}
+              certificateDesc={certificate?.description}
+              certificateLink={certificate?.link}
               index={i}
             />
           ))}

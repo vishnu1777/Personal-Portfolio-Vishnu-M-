@@ -1,7 +1,9 @@
+"use client";
+
 import { client } from "../lib/client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ExploreCard, TitleText, TypingText } from "../components";
+import { ExploreCard, TitleText, TypingText } from ".";
 import styles from "../styles";
 import { staggerContainer } from "../utils/motion";
 

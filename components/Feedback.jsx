@@ -7,8 +7,8 @@ import { useState, useEffect } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import { client } from "../lib/client";
 import { urlFor } from "../lib/client";
-import { fadeIn, staggerContainer, zoomIn } from "../utils/motion";
-import Testimonial from "./Testimonial";
+import { fadeIn, staggerContainer } from "../utils/motion";
+import { Testimonial } from "../sections";
 
 const Feedback = () => {
   const [testimony, setTestimony] = useState([]);

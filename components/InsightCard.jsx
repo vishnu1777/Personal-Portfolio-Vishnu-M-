@@ -6,14 +6,20 @@ import Image from "next/image";
 import { urlFor } from "../lib/client";
 import Link from "next/link";
 
-const InsightCard = (props) => {
+const InsightCard = ({
+  certificateImage,
+  certificateName,
+  certificateDesc,
+  certificateLink,
+  index,
+}) => {
   return (
     <motion.div
-      variants={fadeIn("up", "spring", props.index * 0.5, 1)}
+      variants={fadeIn("up", "spring", index * 0.5, 1)}
       className={`flex md:flex-row flex-col gap-4`}
     >
       <Image
-        src={urlFor(props?.certificate?.image).url()}
+        src={urlFor(certificateImage).url()}
         width={100}
         height={250}
         unoptimized={true}
@@ -23,13 +29,13 @@ const InsightCard = (props) => {
       <div className="w-full flex justify-between items-center">
         <div className="flex-1 md:ml-[62px] flex flex-col max-w-[650px]">
           <h4 className="font-normal lg:text-[42px] text-[26px] text-white">
-            {props?.certificate?.name}
+            {certificateName}
           </h4>
           <p className="mt-[16px] font-normal lg:text-[20px] text-[14px] text-secondary-white">
-            {props?.certificate?.description}
+            {certificateDesc}
           </p>
         </div>
-        <Link href={props?.certificate?.link} target="_blank">
+        <Link href={certificateLink} target="_blank">
           <div
             className="lg:flex hidden items-center justify-center w-[100px] h-[100px] rounded-full bg-transparent
       border-[1px] border-white

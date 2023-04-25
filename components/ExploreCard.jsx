@@ -12,9 +12,9 @@ const ExploreCard = ({
   id,
   imgUrl,
   title,
+  active,
   description,
   index,
-  active,
   projectLink,
   handleClick,
 }) => {
@@ -22,7 +22,9 @@ const ExploreCard = ({
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 1.75)}
       className={`relative ${
-        active === id ? "lg:flex-[3.5] flex-[10]" : "lg:flex-[0.5] flex-[2]"
+        active === id.toString()
+          ? "lg:flex-[3.5] flex-[10]"
+          : "lg:flex-[0.5] flex-[2]"
       } flex items-center justify-center
   min-w-[170px] h-[700px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer
   `}
@@ -52,7 +54,9 @@ const ExploreCard = ({
         mb-[16px]
         `}
             >
-              <img
+              <Image
+                width={50}
+                height={50}
                 src="/headset.svg"
                 alt="headset"
                 className="w-1/2 h-1/2 object-contain "

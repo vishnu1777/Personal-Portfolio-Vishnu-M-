@@ -1,21 +1,16 @@
+"use client";
 import { motion } from "framer-motion";
-import {
-  BottomNavigator,
-  StartSteps,
-  TitleText,
-  TypingText,
-} from "../components";
+import { StartSteps, TitleText, TypingText } from ".";
+
 import styles from "../styles";
 import { staggerContainer, fadeIn, planetVariants } from "../utils/motion";
-
-import { urlFor, client } from "../lib/client";
-import Skill from "./Skill";
-
+import { client } from "../lib/client";
+import { Skill } from "../sections";
 import { useState, useEffect } from "react";
 
 const GetStarted = () => {
-  const [experience, setExperience] = useState([]);
   const [skills, setSkills] = useState([]);
+  const [experience, setExperience] = useState([]);
 
   useEffect(() => {
     const skillsQuery = '*[_type == "skills"]';
@@ -45,14 +40,21 @@ const GetStarted = () => {
         >
           <div className="grid grid-cols-4  gap-5 ">
             {skills?.slice(0, skills?.length / 2).map((skill) => (
-              <Skill key={skill?._id} skill={skill} directionLeft={true} />
+              <Skill
+                key={skill?._id}
+                skillicon={skill?.icon}
+                skillProgress={skill?.progress}
+                directionLeft={true}
+              />
             ))}
             {skills
               ?.slice(skills?.length / 2, skills.length)
               .map((skill, idx) => (
                 <Skill
                   key={`skill?._id-${idx}`}
-                  skill={skill}
+                  skillicon={skill?.icon}
+                  skillProgress={skill?.progress}
+                  // skill={skill}
                   directionLeft={false}
                 />
               ))}
@@ -66,7 +68,7 @@ const GetStarted = () => {
           <TitleText title={<>Experience</>} />
 
           <div className="mt-[31px] flex flex-col max-w-[370px] gap-[24px] ">
-            {experience.map((feature, i) => (
+            {experience?.map((feature, i) => (
               <div key={`${feature}-${i}`}>
                 {feature?.works?.map((work) => (
                   <StartSteps

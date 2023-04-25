@@ -1,11 +1,6 @@
 "use client";
-import { motion } from "framer-motion";
-import styles from "../styles";
-import Image from "next/image";
-import { useState, useEffect } from "react";
-import { client } from "../lib/client";
 
-const Testimonial = ({ testimonial, currentIndex, setCurrentIndex }) => {
+const Testimonial = ({ testimonial, currentIndex }) => {
   return (
     <section>
       <div className="feedback-gradient" />

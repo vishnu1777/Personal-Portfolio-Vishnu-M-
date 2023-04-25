@@ -1,34 +1,37 @@
-import { Footer, Navbar } from "../components";
+import "../styles/globals.css";
 import {
+  BottomNavigator,
+  Footer,
+  Navbar,
   About,
-  Explore,
-  Feedback,
-  GetStarted,
   Hero,
+  GetStarted,
+  Explore,
   Insights,
-  WhatsNew,
-  World,
-} from "../sections";
+  Feedback,
+} from "../components";
 
 const Page = () => (
   <div className="bg-primary-black overflow-hidden">
     <Navbar />
     <Hero />
+
     <div className="relative">
       <About />
       <div className="gradient-03 z-0" />
       <Explore />
+      <BottomNavigator />
     </div>
     <div className="relative">
       <GetStarted />
-      <div className="gradient-04 z-0" />
-      <WhatsNew />
+      <BottomNavigator />
     </div>
-    <World />
     <div className="relative">
       <Insights />
+
       <div className="gradient-04 z-0" />
       <Feedback />
+      <BottomNavigator />
     </div>
     <Footer />
   </div>

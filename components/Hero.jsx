@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useTypewriter } from "react-simple-typewriter";
 import Image from "next/image";
-import BackgroundCircles from "./BackgroundCircles";
+import { BackgroundCircles } from "../sections";
 import styles from "../styles";
 import { myProfile } from "../assets";
 import { staggerContainer, textVariant } from "../utils/motion";
