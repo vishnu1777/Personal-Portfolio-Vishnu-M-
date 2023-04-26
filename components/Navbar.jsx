@@ -70,7 +70,7 @@ const Navbar = () => {
             } p-6 bg-black-gradient z-40 overflow-hidden absolute top-[5rem] right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
           >
             <ul className="list-none justify-end items-center flex-1 flex flex-col">
-              {["Home", "Works", "Skills", "Certificates", "Contact"].map(
+              {["Home", "Skills", "Certificates", "Contact"].map(
                 (navLink, idx) => (
                   <li
                     key={navLink + idx}

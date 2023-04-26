@@ -32,7 +32,7 @@ const Works = ({ filterWork }) => {
           textStyles="text-center"
         />
         <div
-          id="works"
+          
           className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5"
         >
           {filterWork.map((work, i) => (
