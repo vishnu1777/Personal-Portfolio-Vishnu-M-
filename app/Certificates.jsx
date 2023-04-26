@@ -1,6 +1,8 @@
 import { client } from "../lib/client";
 import { Certifications } from "../components";
 
+const revalidate = 60;
+
 async function Certificates() {
   const certificateQuery = '*[_type == "certificates"]';
   const certificates = await client.fetch(certificateQuery, {
