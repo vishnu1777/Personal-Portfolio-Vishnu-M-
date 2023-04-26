@@ -1,6 +1,6 @@
 import React from "react";
 import { client } from "../lib/client";
-
+export const revalidate = 60;
 import { SkillAndExperience } from "../components";
 async function TechStack() {
   const skillsQuery = '*[_type == "skills"]';

@@ -18,12 +18,12 @@ const Navbar = () => {
       initial="hidden"
       // viewport={{ once: true }}
       whileInView="show"
-      className={`${styles.xPaddings} py-6 relative mt-2  `}
+      className={`${styles.xPaddings} py-6 relative mt-6  `}
     >
       <div className="absolute w-[50%]  inset-0 gradient-01" />
 
       <div
-        className={`${styles.innerWidth} mx-auto flex  mt-6  justify-between gap-8`}
+        className={`${styles.innerWidth} mx-auto flex  justify-between gap-8`}
       >
         <h2 className="font-extrabold text-24px leading-30px text-white">
           Portfolio
@@ -34,7 +34,7 @@ const Navbar = () => {
               className="py-1 px-2  cursor-pointer "
               onClick={() => router.push("/#")}
             >
-              <a href="/#">Home</a>
+              <a href="#home">Home</a>
             </li>
 
             <li className="py-1 px-2 cursor-pointer">
