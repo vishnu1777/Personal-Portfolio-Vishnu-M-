@@ -1,3 +1,5 @@
+import "../styles/globals.css";
+
 const RootLayout = ({ children }) => (
   <html lang="en">
     <head>

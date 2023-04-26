@@ -1,30 +1,12 @@
 "use client";
+import React from "react";
 import { motion } from "framer-motion";
-import { StartSteps, TitleText, TypingText } from ".";
-
-import styles from "../styles";
-import { staggerContainer, fadeIn, planetVariants } from "../utils/motion";
-import { client } from "../lib/client";
 import { Skill } from "../sections";
-import { useState, useEffect } from "react";
-
-const GetStarted = () => {
-  const [skills, setSkills] = useState([]);
-  const [experience, setExperience] = useState([]);
-
-  useEffect(() => {
-    const skillsQuery = '*[_type == "skills"]';
-    const experienceQuery = '*[_type == "experiences"]';
-
-    client.fetch(experienceQuery).then((data) => {
-      setExperience(data);
-    });
-
-    client.fetch(skillsQuery).then((data) => {
-      setSkills(data);
-    });
-  }, []);
-
+import { TitleText, TypingText } from "./CustomTexts";
+import StartSteps from "./StartSteps";
+import styles from "../styles";
+import { fadeIn, planetVariants, staggerContainer } from "../utils/motion";
+const SkillAndExperience = ({ skills, experience }) => {
   return (
     <section id="skills" className={`${styles.paddings} relative z-10 `}>
       <motion.div
@@ -54,7 +36,6 @@ const GetStarted = () => {
                   key={`skill?._id-${idx}`}
                   skillicon={skill?.icon}
                   skillProgress={skill?.progress}
-                  // skill={skill}
                   directionLeft={false}
                 />
               ))}
@@ -89,4 +70,4 @@ const GetStarted = () => {
   );
 };
 
-export default GetStarted;
+export default SkillAndExperience;

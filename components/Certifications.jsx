@@ -1,22 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
-import { InsightCard, TitleText, TypingText } from ".";
+import { CertificateCard, TitleText, TypingText } from ".";
 import styles from "../styles";
 import { staggerContainer } from "../utils/motion";
-import { useState, useEffect } from "react";
-import { client } from "../lib/client";
 
-const Insights = () => {
-  const [certificates, setCertificates] = useState([]);
-
-  useEffect(() => {
-    const certificateQuery = '*[_type == "certificates"]';
-
-    client.fetch(certificateQuery).then((data) => {
-      setCertificates(data);
-    });
-  }, []);
-
+const Certifications = ({ certificates }) => {
   return (
     <section id="certificates" className={`${styles.paddings} relative z-10 `}>
       <motion.div
@@ -30,7 +18,7 @@ const Insights = () => {
         <TitleText title="Certifications" textStyles="text-center" />
         <div className="mt-[50px] flex flex-col gap-[30px]">
           {certificates?.map((certificate, i) => (
-            <InsightCard
+            <CertificateCard
               key={`${certificate?.name}-${i}`}
               certificateImage={certificate?.image}
               certificateName={certificate?.name}
@@ -45,4 +33,4 @@ const Insights = () => {
   );
 };
 
-export default Insights;
+export default Certifications;

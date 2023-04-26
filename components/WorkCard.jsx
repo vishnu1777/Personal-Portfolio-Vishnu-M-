@@ -8,7 +8,7 @@ import { fadeIn } from "../utils/motion";
 
 import Link from "next/link";
 
-const ExploreCard = ({
+const WorkCard = ({
   id,
   imgUrl,
   title,
@@ -20,6 +20,7 @@ const ExploreCard = ({
 }) => {
   return (
     <motion.div
+      id="works"
       variants={fadeIn("right", "spring", index * 0.5, 1.75)}
       className={`relative ${
         active === id.toString()
@@ -74,4 +75,4 @@ const ExploreCard = ({
     </motion.div>
   );
 };
-export default ExploreCard;
+export default WorkCard;

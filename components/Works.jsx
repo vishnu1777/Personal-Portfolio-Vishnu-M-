@@ -1,25 +1,14 @@
 "use client";
-
-import { client } from "../lib/client";
-import { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { TitleText, TypingText } from "./CustomTexts";
+import WorkCard from "./WorkCard";
 import { motion } from "framer-motion";
-import { ExploreCard, TitleText, TypingText } from ".";
-import styles from "../styles";
 import { staggerContainer } from "../utils/motion";
-
-const Explore = () => {
+import styles from "../styles";
+const Works = ({ filterWork }) => {
   const [active, setActive] = useState("world-2");
-  const [filterWork, setFilterWork] = useState([]);
-
-  useEffect(() => {
-    const query = '*[_type == "works"]';
-    client.fetch(query).then((data) => {
-      setFilterWork(data);
-    });
-  }, []);
-
   return (
-    <section id="works" className={`${styles.paddings}  `}>
+    <section className={`${styles.paddings} `}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -27,6 +16,7 @@ const Explore = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col`}
       >
+        {" "}
         <TypingText title="| Projects" textStyles="text-center" />
         <TitleText
           title={
@@ -41,9 +31,12 @@ const Explore = () => {
           }
           textStyles="text-center"
         />
-        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
+        <div
+          id="works"
+          className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5"
+        >
           {filterWork.map((work, i) => (
-            <ExploreCard
+            <WorkCard
               key={work?._id}
               title={work?.title}
               imgUrl={work?.imgUrl}
@@ -61,4 +54,4 @@ const Explore = () => {
   );
 };
 
-export default Explore;
+export default Works;

@@ -6,7 +6,7 @@ import Image from "next/image";
 import { urlFor } from "../lib/client";
 import Link from "next/link";
 
-const InsightCard = ({
+const CertificateCard = ({
   certificateImage,
   certificateName,
   certificateDesc,
@@ -55,4 +55,4 @@ const InsightCard = ({
   );
 };
 
-export default InsightCard;
+export default CertificateCard;

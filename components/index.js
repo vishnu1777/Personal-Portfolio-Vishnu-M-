@@ -1,31 +1,34 @@
 import { TypingText, TitleText } from "./CustomTexts";
 import Navbar from "./Navbar";
+
 import About from "./About";
-import ExploreCard from "./ExploreCard";
+import SkillAndExperience from "./SkillAndExperience";
+import FilteredData from "./Works";
+import WorkCard from "./WorkCard";
 import StartSteps from "./StartSteps";
-import Explore from "./Explore";
-import NewFeatures from "./NewFeatures";
-import GetStarted from "./GetStarted";
-import InsightCard from "./InsightCard";
-import Feedback from "./Feedback";
+import Works from "./Works";
+import ClientSideRoute from "./ClientSideRoute";
+import CertificateCard from "./CertificateCard";
+
 import Hero from "./Hero";
+import Certifications from "./Certifications";
 import Footer from "./Footer";
-import Insights from "./Insights";
+import TestimonialWrapper from "./TestimonialWrapper";
 import BottomNavigator from "./BottomNavigator";
 export {
   TitleText,
   BottomNavigator,
   TypingText,
   StartSteps,
-  ExploreCard,
-  NewFeatures,
-  InsightCard,
+  WorkCard,
+  FilteredData,
+  CertificateCard,
   Footer,
   About,
   Navbar,
-  GetStarted,
+  SkillAndExperience,
+  Certifications,
+  TestimonialWrapper,
   Hero,
-  Explore,
-  Insights,
-  Feedback,
+  Works,
 };

@@ -3,28 +3,19 @@
 import { motion } from "framer-motion";
 import styles from "../styles";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
-import { client } from "../lib/client";
+
 import { urlFor } from "../lib/client";
 import { fadeIn, staggerContainer } from "../utils/motion";
 import { Testimonial } from "../sections";
+import { useState } from "react";
 
-const Feedback = () => {
-  const [testimony, setTestimony] = useState([]);
+const TestimonialWrapper = ({ testimony }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
   const handleClick = (index) => {
     setCurrentIndex(index);
   };
-
-  useEffect(() => {
-    const testimonyQuery = '*[_type == "testimonials"]';
-
-    client.fetch(testimonyQuery).then((data) => {
-      setTestimony(data);
-    });
-  }, []);
 
   return (
     <section className={`${styles.paddings} relative z-10 `}>
@@ -88,4 +79,4 @@ const Feedback = () => {
   );
 };
 
-export default Feedback;
+export default TestimonialWrapper;

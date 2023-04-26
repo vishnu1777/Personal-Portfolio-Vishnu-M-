@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import styles from "../styles";
 import { navVariants } from "../utils/motion";
@@ -8,6 +9,7 @@ import { close, menu } from "../assets";
 import { useState } from "react";
 import Link from "next/link";
 const Navbar = () => {
+  const router = useRouter();
   const [toggle, setToggle] = useState(false);
   return (
     <motion.nav
@@ -16,33 +18,36 @@ const Navbar = () => {
       initial="hidden"
       // viewport={{ once: true }}
       whileInView="show"
-      className={`${styles.xPaddings} py-6 relative   `}
+      className={`${styles.xPaddings} py-6 relative mt-2  `}
     >
       <div className="absolute w-[50%]  inset-0 gradient-01" />
 
       <div
-        className={`${styles.innerWidth} mx-auto flex  mt-2  justify-between gap-8`}
+        className={`${styles.innerWidth} mx-auto flex  mt-6  justify-between gap-8`}
       >
         <h2 className="font-extrabold text-24px leading-30px text-white">
           Portfolio
         </h2>
         <div className="hidden md:flex  z-50">
           <ul className=" md:flex gap-4 font-extrabold  text-24px leading-30px text-white">
-            <li className="py-1 px-2  cursor-pointer ">
-              <Link href="#home">Home</Link>
-            </li>
-            <li className="py-1 px-2 cursor-pointer">
-              <Link href="#works">Works</Link>
-            </li>
-            <li className="py-1 px-2 cursor-pointer">
-              <Link href="#skills">Skills</Link>
-            </li>
-            <li className="py-1 px-2 cursor-pointer">
-              <Link href="#certificates">Certificates</Link>
+            <li
+              className="py-1 px-2  cursor-pointer "
+              onClick={() => router.push("/#")}
+            >
+              <a href="/#">Home</a>
             </li>
 
             <li className="py-1 px-2 cursor-pointer">
-              <Link href="#contact">Contact</Link>
+              <a href="#skills" legacyBehavior>
+                Skils
+              </a>
+            </li>
+            <li className="py-1 px-2 cursor-pointer">
+              <a href="#certificates">Certificates</a>
+            </li>
+
+            <li className="py-1 px-2 cursor-pointer">
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -73,9 +78,7 @@ const Navbar = () => {
                       idx == 5 - 1 ? "mb-0" : "mb-4"
                     }`}
                   >
-                    <Link href={`${"#" + navLink.toLowerCase()}`}>
-                      {navLink}
-                    </Link>
+                    <a href={`${"#" + navLink.toLowerCase()}`}>{navLink}</a>
                   </li>
                 )
               )}
