@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const BottomNavigator = () => {
   return (
-    <Link href="/">
+    <Link href="#home">
       <footer className="sticky bottom-5 w-full cursor-pointer">
         <div className="flex items-center justify-center">
           <Image
