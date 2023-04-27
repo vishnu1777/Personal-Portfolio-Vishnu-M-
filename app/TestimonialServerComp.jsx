@@ -3,9 +3,7 @@ import { TestimonialWrapper } from "../components";
 export const revalidate = 60;
 async function TestimonialServerComp() {
   const testimonyQuery = '*[_type == "testimonials"]';
-  const testimony = await client.fetch(testimonyQuery, {
-    cache: "force-cache",
-  });
+  const testimony = await client.fetch(testimonyQuery);
   return (
     <div>
       <TestimonialWrapper testimony={testimony} />
