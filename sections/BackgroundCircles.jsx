@@ -4,7 +4,7 @@ const BackgroundCircles = () => {
   return (
     <motion.div
       initial={{
-        opacity: 1,
+        opacity: 0,
       }}
       animate={{
         opacity: [0.1, 0.2, 0.4, 0.8, 0.1, 1.0],
