@@ -16,7 +16,7 @@ const Navbar = () => {
       id="home"
       variants={navVariants}
       initial="hidden"
-      // viewport={{ once: true }}
+      viewport={{ once: true }}
       whileInView="show"
       className={`${styles.xPaddings} py-6 relative mt-6  `}
     >
