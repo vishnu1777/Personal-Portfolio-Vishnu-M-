@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { staggerContainer } from "../utils/motion";
 import styles from "../styles";
 const Works = ({ filterWork }) => {
-  const [active, setActive] = useState("world-2");
+  const [active, setActive] = useState("world-1");
   return (
     <section id="works" className={`${styles.paddings} `}>
       <motion.div
@@ -31,7 +31,7 @@ const Works = ({ filterWork }) => {
           }
           textStyles="text-center"
         />
-        <div className="mt-[50px] flex lg:flex-row flex-col-reverse min-h-[70vh] gap-5">
+        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
           {filterWork.map((work, i) => (
             <WorkCard
               key={work?._id}
