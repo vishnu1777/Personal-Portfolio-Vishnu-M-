@@ -37,6 +37,7 @@ const WorkCard = ({
         width={100}
         height={100}
         unoptimized={true}
+        priority
         className="absolute w-full h-full object-cover rounded-[24px]"
       />
       {active !== id ? (
