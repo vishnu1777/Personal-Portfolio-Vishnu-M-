@@ -8,7 +8,7 @@ import styles from "../styles";
 const Works = ({ filterWork }) => {
   const [active, setActive] = useState("world-2");
   return (
-    <section className={`${styles.paddings} `}>
+    <section id="works" className={`${styles.paddings} `}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -31,10 +31,7 @@ const Works = ({ filterWork }) => {
           }
           textStyles="text-center"
         />
-        <div
-          
-          className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5"
-        >
+        <div className="mt-[50px] flex lg:flex-row flex-col-reverse min-h-[70vh] gap-5">
           {filterWork.map((work, i) => (
             <WorkCard
               key={work?._id}

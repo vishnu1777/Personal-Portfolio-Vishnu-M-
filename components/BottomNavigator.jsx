@@ -1,25 +1,16 @@
 "use client";
 
-import { myProfile } from "../assets";
-import Link from "next/link";
-import Image from "next/image";
+import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 
-const BottomNavigator = () => {
+const BottomNavigator = ({ location }) => {
   return (
-    <Link href="#home">
-      <footer className="sticky bottom-5 w-full cursor-pointer">
+    <a href={`#${location}`}>
+      <footer className="sticky z-10 bottom-5 w-full cursor-pointer">
         <div className="flex items-center justify-center">
-          <Image
-            height={20}
-            unoptimized={true}
-            width={20}
-            className="h-10 w-10 md:h-14 md:w-14 rounded-full filter  opacity-50 hover:opacity-100 cursor-pointer"
-            src={myProfile}
-            alt="footer-image"
-          />
+          <MdKeyboardDoubleArrowUp className="h-10 w-10 text-white md:h-12 md:w-12 rounded-full filter  opacity-50 hover:opacity-100 cursor-pointer" />
         </div>
       </footer>
-    </Link>
+    </a>
   );
 };
 

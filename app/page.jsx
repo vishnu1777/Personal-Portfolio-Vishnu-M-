@@ -12,20 +12,20 @@ const Page = () => (
 
     <div className="relative">
       <About />
-      <div className="gradient-03 z-0" id="works" />
+      <div className="gradient-03 z-0" />
       <Projects />
-      <BottomNavigator />
+      <BottomNavigator location={"home"} />
     </div>
     <div className="relative">
       <TechStack />
-      <BottomNavigator />
+      <BottomNavigator location={"works"} />
     </div>
     <div className="relative">
       <Certificates />
-
+      <BottomNavigator location={"skills"} />
       <div className="gradient-04 z-0" />
       <TestimonialServerComp />
-      <BottomNavigator />
+      <BottomNavigator location={"certificates"} />
     </div>
     <Footer />
   </div>
