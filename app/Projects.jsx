@@ -5,7 +5,9 @@ export const revalidate = 60;
 async function Projects() {
   const query = groq`*[_type == "works"]`;
 
-  const filterWork = await client.fetch(query);
+  const filterWork = await client.fetch(query, {
+    next: { revalidate: 60 },
+  });
 
   return (
     <div>

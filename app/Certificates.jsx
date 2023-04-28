@@ -5,7 +5,9 @@ export const revalidate = 60;
 
 async function Certificates() {
   const certificateQuery = '*[_type == "certificates"]';
-  const certificates = await client.fetch(certificateQuery);
+  const certificates = await client.fetch(certificateQuery, {
+    next: { revalidate: 60 },
+  });
 
   return (
     <div>

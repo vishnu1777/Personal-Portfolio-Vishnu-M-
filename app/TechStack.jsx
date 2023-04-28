@@ -8,7 +8,7 @@ async function TechStack() {
 
   const skillsData = await client.fetch(skillsQuery);
   const experienceData = await client.fetch(experienceQuery, {
-    cache: "force-cache",
+    next: { revalidate: 60 },
   });
 
   return (
