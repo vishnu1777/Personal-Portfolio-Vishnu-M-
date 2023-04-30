@@ -55,7 +55,17 @@ const TestimonialWrapper = ({ testimony }) => {
 
       <div className="flex justify-center  items-center mt-4">
         <div
-          className="flex justify-center text-[#25618b] hover:text-white hover:bg-[#25618b] bg-white items-center w-[50px] h-[50px] rounded-full m-4 transition-all ease-in-out  duration-[0.3s]"
+          className={`flex justify-center ${
+            testimony.length > 1 ? "text-[#25618b]" : "text-gray-700"
+          } ${
+            testimony.length > 1 ? "hover:text-white" : "hover:text-gray-700"
+          } ${
+            testimony.length > 1 ? "hover:bg-[#25618b]" : "hover:bg-gray-500"
+          }  ${
+            testimony.length > 1 ? "bg-white" : "bg-gray-500"
+          } items-center ${
+            testimony.length > 1 ? "cursor-pointer" : " cursor-default"
+          } w-[50px] h-[50px] rounded-full m-4 transition-all ease-in-out  duration-[0.3s]`}
           onClick={() =>
             handleClick(
               currentIndex === 0 ? testimony.length - 1 : currentIndex - 1
@@ -65,7 +75,17 @@ const TestimonialWrapper = ({ testimony }) => {
           <HiChevronLeft className="w-[20px] h-[20px] " />
         </div>
         <div
-          className="flex justify-center text-[#25618b] hover:text-white hover:bg-[#25618b] bg-white items-center w-[50px] h-[50px] rounded-full m-4 transition-all ease-in-out  duration-[0.3s]"
+          className={`flex justify-center ${
+            testimony.length > 1 ? "text-[#25618b]" : "text-gray-700"
+          } ${
+            testimony.length > 1 ? "hover:text-white" : "hover:text-gray-700"
+          } ${
+            testimony.length > 1 ? "hover:bg-[#25618b]" : "hover:bg-gray-500"
+          }  ${
+            testimony.length > 1 ? "bg-white" : "bg-gray-500"
+          } items-center ${
+            testimony.length > 1 ? "cursor-pointer" : " cursor-default"
+          } w-[50px] h-[50px] rounded-full m-4 transition-all ease-in-out  duration-[0.3s]`}
           onClick={() =>
             handleClick(
               currentIndex === testimony.length - 1 ? 0 : currentIndex + 1
