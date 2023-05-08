@@ -29,7 +29,7 @@ const Hero = () => {
       >
         <BackgroundCircles />
         <div className="flex justify-center items-center flex-col relative z-10">
-          <motion.h1
+          <motion.div
             variants={textVariant(1.1)}
             className="font-bold lg:text-[144px] md:text-[100px] sm:text-[60px] text-[44px] lg:leading-[158.4px] md:leading-[114.4px] sm:leading-[74.4px] leading-[64.4px] uppercase text-white"
           >
@@ -38,7 +38,7 @@ const Hero = () => {
               src={myProfile}
               alt="my-profile"
             />
-          </motion.h1>
+          </motion.div>
 
           <motion.div
             variants={textVariant(1.2)}

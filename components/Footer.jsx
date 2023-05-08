@@ -95,6 +95,7 @@ const Footer = () => {
             <div className="w-[90%] flex-col my-4 mx-auto flex items-center justify-center">
               <div className="w-full hover:shadow-lg font-normal my-3 mx-0 rounded-[10px] cursor-pointer transition-all ease-in-out duration-[0.3s] ">
                 <input
+                  required
                   type="text"
                   placeholder="Your Name"
                   value={name}
@@ -105,6 +106,7 @@ const Footer = () => {
               </div>
               <div className="w-full  my-3 mx-0 rounded-[10px] cursor-pointer transition-all ease-in-out duration-[0.3s]">
                 <input
+                  required
                   type="text"
                   placeholder="Your email"
                   value={email}
@@ -115,6 +117,7 @@ const Footer = () => {
               </div>
               <div className="w-full  my-3 mx-0 rounded-[10px] cursor-pointer transition-all ease-in-out duration-[0.3s] ">
                 <textarea
+                  required
                   className="w-full h-40 p-4 border-none font-sans rounded-lg outline-none"
                   placeholder="Your message"
                   value={message}
