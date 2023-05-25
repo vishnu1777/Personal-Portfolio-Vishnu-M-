@@ -4,8 +4,6 @@ import TechStack from "./TechStack";
 import Certificates from "./Certificates";
 import TestimonialServerComp from "./TestimonialServerComp";
 import { BottomNavigator, Footer, Navbar, About, Hero } from "../components";
-import Gpt from "./Gpt";
-import Cube from "../components/Cube";
 
 const Page = () => (
   <div className="bg-primary-black overflow-hidden">

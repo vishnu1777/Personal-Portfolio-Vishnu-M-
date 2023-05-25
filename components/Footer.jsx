@@ -153,7 +153,7 @@ const Footer = () => {
           )}
         </div>
         <BottomNavigator location="home" />
-        {/* here the form ends */}
+        {/* here the <form> ends */}
         <div className="flex flex-col">
           <div className="mb-[50px] h-[2px] bg-white opacity-10 " />
           <div className="flex items-center justify-between flex-wrap gap-4">
