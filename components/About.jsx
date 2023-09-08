@@ -18,7 +18,7 @@ const About = () => (
       <TypingText title="| About Me" textStyles="text-center" />
       <motion.p
         variants={fadeIn("up", "tween", 0.2, 1)}
-        className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white "
+        className="mt-[8px] font-normal sm:text-[32px] text-[20px]  text-center text-secondary-white "
       >
         <span className="font-extrabold text-white">Hii,</span> my name is
         <span className="font-extrabold text-white"> Vishnu M</span> , a
