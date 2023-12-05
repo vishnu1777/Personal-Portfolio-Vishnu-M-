@@ -8,6 +8,7 @@ import { navVariants } from "../utils/motion";
 import { close, menu } from "../assets";
 import { useState } from "react";
 import Link from "next/link";
+import { Example } from "./NavImaage";
 const Navbar = () => {
   const router = useRouter();
   const [toggle, setToggle] = useState(false);
@@ -25,9 +26,14 @@ const Navbar = () => {
       <div
         className={`${styles.innerWidth} mx-auto flex  justify-between gap-8`}
       >
-        <h2 className="font-extrabold text-24px leading-30px text-white">
+        {/* <h2 className="font-extrabold text-24px leading-30px text-white">
           Portfolio
-        </h2>
+        </h2> */}
+        <div className=" h-10 w-10">
+
+        <Example/>
+        </div>
+        
         <div className="hidden md:flex  z-50">
           <ul className=" md:flex gap-4 font-extrabold  text-24px leading-30px text-white">
             <li
